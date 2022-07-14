@@ -7,14 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horizontal</title>
   <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     #horizontal {
       display: flex;
+      align-items: center;
       list-style: none;
-      text-align: center;
-      margin: 0 auto;
-      padding: 0;
-      height: 91vh;
-      width: fit-content;
+      margin: 30px 0 20px;
+      padding-left: auto;
     }
 
     li {
@@ -22,18 +29,25 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      background: #000;
+      width: 18px;
+    }
+
+    li:hover {
+      background: #fff;
     }
   </style>
 </head>
 
 <body>
 
+  <div class="container">
+    <ul id="horizontal" style="flex-direction: row;"></ul>
 
-  <ul id="horizontal" style="flex-direction: row;">
-  </ul>
-
-  <a href="index.html">vertical</a> <button>reverse</button>
+    <button>reverse</button> <a href="index.html">vertical</a>
+  </div>
 
   <script>
     const table = document.getElementById('horizontal');

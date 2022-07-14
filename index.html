@@ -7,15 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vertical</title>
   <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     #vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       list-style: none;
-      text-align: center;
-      margin: 50px auto 0;
+      margin: 30px 0 20px;
       padding: 0;
     }
 
     li {
       margin-bottom: 15px;
+      width: fit-content;
+      background: #000;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: #fff;
     }
   </style>
 </head>
@@ -23,10 +41,11 @@
 <body>
 
 
-  <ul id="vertical">
-  </ul>
+  <div class="container">
+    <ul id="vertical"></ul>
 
-  <a href="horizontal.html">horizontal</a>
+    <a href="horizontal.html">horizontal</a>
+  </div>
 
   <script>
     const table = document.getElementById('vertical');
